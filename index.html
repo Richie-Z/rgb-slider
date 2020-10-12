@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RGB slider</title>
+    <style type="text/css">
+      body {
+        background: black;
+      }
+      fieldset {
+        border: none;
+      }
+      .container {
+        width: 50%;
+        margin: auto;
+        margin-top: 10em;
+        border-style: solid;
+        border-radius: 10px;
+        padding: 100px;
+      }
+      .color {
+        border: 1px white;
+        border-style: solid;
+        min-height: 150px;
+        max-width: 300px;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        align-content: center;
+        border-radius: 12px;
+      }
+      .color output {
+        margin: auto;
+      }
+      #rgb_out {
+      }
+      label,
+      output {
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-family: "Roboto", sans-serif;
+        color: #fff;
+        font-size: 1.1em;
+      }
+      label[for="r"],
+      output[for="r"] {
+        background-color: #f00;
+      }
+      label[for="g"],
+      output[for="g"] {
+        background-color: #0f0;
+      }
+      label[for="b"],
+      output[for="b"] {
+        background-color: #00f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <center>
+        <div class="color">
+          <output id="rgb_out"> rgb(0, 0, 0)</output>
+        </div>
+        <fieldset>
+          <label for="r">R</label>
+          <input type="range" min="0" max="255" id="r" step="1" value="0" />
+          <output for="r" id="r_out">0</output>
+        </fieldset>
+
+        <fieldset>
+          <label for="g">G</label>
+          <input type="range" min="0" max="255" id="g" step="1" value="0" />
+          <output for="g" id="g_out">0</output>
+        </fieldset>
+
+        <fieldset>
+          <label for="b">B</label>
+          <input type="range" min="0" max="255" id="b" step="1" value="0" />
+          <output for="b" id="b_out">0</output>
+        </fieldset>
+      </center>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
